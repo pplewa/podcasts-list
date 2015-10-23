@@ -84,7 +84,9 @@ var getPodcasts = function() {
 }
 
 getPodcasts().then(function(podcasts){
-	createNote('podcasts', podcasts.join('<br />').replace(/&/g, '&amp;').replace(/"null"/g, '"#"')).then(function(){
+	var title = 'Podcasts list for ' + dateTo.format('DD/MM/YYYY');
+	var body = podcasts.join('<br />').replace(/&/g, '&amp;').replace(/"null"/g, '"#"');
+	createNote(title, body).then(function(){
 		console.log('ok');
 	}).catch(function(err){
 		console.log(err);
