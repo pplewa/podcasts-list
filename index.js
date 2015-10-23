@@ -70,8 +70,10 @@ var getPodcasts = function() {
 		podcastFeeds.forEach(function(feed){
 			var req = request(feed);
 			req.on('response', function (res) {
+				if (res.statusCode != 200) {
+					return console.log('loading feed failed: ', feed);
+				}
 				var stream = this;
-				if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
 				var feedparser = new FeedParser();
 				feedparsers.push(feedparser);
 				stream.pipe(feedparser);
