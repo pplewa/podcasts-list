@@ -5,7 +5,7 @@ var moment = require('moment-timezone');
 var config = require('./config');
 var Q = require('q');
 
-var dateFrom = moment().tz(config.TIMEZONE).startOf('day').subtract(Number(config.DAYS_AGO) + 6, 'day');
+var dateFrom = moment().tz(config.TIMEZONE).startOf('day').subtract(Number(config.DAYS_AGO) + 7, 'day');
 var dateTo = moment().tz(config.TIMEZONE).startOf('day').subtract(Number(config.DAYS_AGO) - 1, 'day');
 
 console.log('from', dateFrom.toString());

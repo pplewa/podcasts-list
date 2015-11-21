@@ -6,7 +6,6 @@
 	"http://becomingasuperhuman.libsyn.com/rss",
 	"http://primalblueprint.libsyn.com/rss",
 	"http://chriskresser.com/feed/podcast",
-	"http://superherohealth.libsyn.com/rss",
 	"http://fatburningman.com/feed/podcast/",
 	"http://restoretheflora.com/feed/podcast/",
 	"http://smartdrugsmarts.com/feed/podcast/",
@@ -48,5 +47,7 @@
 	"http://feeds.gimletmedia.com/surprisinglyawesome",
 	"http://www.podcastone.com/podcast?categoryID2=806",
 	"http://www.relay.fm/radar/feed",
-	"http://feeds.feedwrench.com/react-native-radio.rss"
+	"http://feeds.feedwrench.com/react-native-radio.rss",
+	"http://feeds.soundcloud.com/users/soundcloud:users:5984399/sounds.rss",
+	"https://seanwes.com/feed/podcast"
 ]
