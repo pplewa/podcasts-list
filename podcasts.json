@@ -49,5 +49,7 @@
 	"http://www.relay.fm/radar/feed",
 	"http://feeds.feedwrench.com/react-native-radio.rss",
 	"http://feeds.soundcloud.com/users/soundcloud:users:5984399/sounds.rss",
-	"https://seanwes.com/feed/podcast"
+	"https://seanwes.com/feed/podcast",
+	"http://web.stanford.edu/group/edcorner/uploads/podcast/EducatorsCorner.xml",
+	"http://brianjohnson.libsyn.com/rss"
 ]
