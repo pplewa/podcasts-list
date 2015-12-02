@@ -29,13 +29,11 @@
 	"http://javascriptjabber.com/podcast.rss",
 	"http://altucher.stansberry.libsynpro.com/rss",
 	"http://feeds.soundcloud.com/users/soundcloud:users:77542725/sounds.rss",
-	"http://feeds.feedburner.com/dancarlin/commonsense?format=xml",
 	"http://feeds.feedburner.com/HappierWithGretchenRubin",
 	"http://feeds.soundcloud.com/users/soundcloud:users:38128127/sounds.rss",
 	"http://layout.fm/rss",
 	"http://feeds.soundcloud.com/users/soundcloud:users:125016158/sounds.rss",
 	"http://feeds.soundcloud.com/users/soundcloud:users:5984399/sounds.rss",
-	"http://atp.fm/episodes?format=rss",
 	"http://feeds.feedburner.com/FounderCalls",
 	"http://feeds.soundcloud.com/users/soundcloud:users:106956234/sounds.rss",
 	"http://longform.libsyn.com/rss",
@@ -51,5 +49,7 @@
 	"http://feeds.soundcloud.com/users/soundcloud:users:5984399/sounds.rss",
 	"https://seanwes.com/feed/podcast",
 	"http://web.stanford.edu/group/edcorner/uploads/podcast/EducatorsCorner.xml",
-	"http://brianjohnson.libsyn.com/rss"
+	"http://brianjohnson.libsyn.com/rss",
+	"http://feeds.feedburner.com/freakonomicsradio",
+	"http://ttlpodcast.com/feeds/rss.xml"
 ]
