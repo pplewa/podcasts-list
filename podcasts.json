@@ -51,5 +51,7 @@
 	"http://web.stanford.edu/group/edcorner/uploads/podcast/EducatorsCorner.xml",
 	"http://brianjohnson.libsyn.com/rss",
 	"http://feeds.feedburner.com/freakonomicsradio",
-	"http://ttlpodcast.com/feeds/rss.xml"
+	"http://ttlpodcast.com/feeds/rss.xml",
+	"http://feeds.soundcloud.com/users/soundcloud:users:152823423/sounds.rss",
+	"http://theminimalists.libsyn.com/rss"
 ]
