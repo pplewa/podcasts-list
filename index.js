@@ -5,6 +5,8 @@ var moment = require('moment-timezone');
 var config = require('./config');
 var Q = require('q');
 
+var PODCAST_STORE_URL = 'https://spreadsheets.google.com/feeds/list/16z_S52ajuRiK0Uel9M0Tv6Xui9dn1Qz-8Di6vTvcWek/od6/public/values?alt=json';
+
 var dateFrom = moment().tz(config.TIMEZONE).startOf('day').subtract(Number(config.DAYS_AGO) + 7, 'day');
 var dateTo = moment().tz(config.TIMEZONE).endOf('day').subtract(Number(config.DAYS_AGO) - 1, 'day');
 
@@ -63,10 +65,14 @@ var getPodcasts = function() {
 		});
 	};
 
-	request({ url: process.env.PODCAST_STORE_URL, json: true }, function(error, response, podcastFeeds) {
+
+	request({ url: PODCAST_STORE_URL, json: true }, function(error, response, data) {
 		if (error) {
 			return console.log(error);
 		}
+		var podcastFeeds = data.feed.entry.map(function(entry){ 
+			return entry['gsx$link'].$t; 
+		});
 		podcastFeeds.forEach(function(feed){
 			var req = request(feed);
 			req.on('response', function (res) {
@@ -88,9 +94,9 @@ var getPodcasts = function() {
 getPodcasts().then(function(podcasts){
 	var title = 'Podcasts list for ' + dateTo.format('DD/MM/YYYY');
 	var body = podcasts.join('<br />').replace(/&/g, '&amp;').replace(/"null"/g, '"#"');
-	createNote(title, body).then(function(){
-		console.log('ok');
-	}).catch(function(err){
-		console.log(err);
-	});
+	// createNote(title, body).then(function(){
+	// 	console.log('ok');
+	// }).catch(function(err){
+	// 	console.log(err);
+	// });
 });
