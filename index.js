@@ -94,9 +94,9 @@ var getPodcasts = function() {
 getPodcasts().then(function(podcasts){
 	var title = 'Podcasts list for ' + dateTo.format('DD/MM/YYYY');
 	var body = podcasts.join('<br />').replace(/&/g, '&amp;').replace(/"null"/g, '"#"');
-	// createNote(title, body).then(function(){
-	// 	console.log('ok');
-	// }).catch(function(err){
-	// 	console.log(err);
-	// });
+	createNote(title, body).then(function(){
+		console.log('ok');
+	}).catch(function(err){
+		console.log(err);
+	});
 });
