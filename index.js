@@ -92,6 +92,7 @@ var getPodcasts = function() {
 }
 
 getPodcasts().then(function(podcasts){
+	console.log(config.TIMEZONE);
 	var podcastTo = moment().tz(config.TIMEZONE).endOf('day').subtract(Number(config.DAYS_AGO) - 2, 'day').endOf('week');
 	var title = 'Podcasts list for ' + podcastTo.format('DD/MM/YYYY');
 	var body = podcasts.join('<br />').replace(/&/g, '&amp;').replace(/"null"/g, '"#"');
